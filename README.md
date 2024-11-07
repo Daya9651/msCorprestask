@@ -14,7 +14,7 @@ Day 6 :- Create UI Page for Ticket Details Page
 Day 7 :- Added filter for search ticket by customer Name
 Day 8 :- Deleted Data From Dashboard api integratred 
 Day 9 :- Apply Velidation For All Required Field
-Day 10 :- 
+Day 10 :- Nothing 
 
 
 ## Getting Started
