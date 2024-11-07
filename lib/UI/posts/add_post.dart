@@ -143,12 +143,12 @@ class _AddPostScreenState extends State<AddPostScreen> {
                         'id': id
                       }).then((value) {
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>PostScreen()));
-                        Utlis().toastMessage('Post added');
+                        Utils.showSnackbar(context, 'Post added');
                         setState(() {
                           loading = false;
                         });
                       }).onError((error, stackTrace) {
-                        Utlis().toastMessage(error.toString());
+                        Utils.showSnackbar(context, error.toString());
                         setState(() {
                           loading = false;
                         });

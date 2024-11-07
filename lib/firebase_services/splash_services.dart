@@ -10,7 +10,6 @@ class SplashServices {
   void isLogin(BuildContext context) {
     final auth = FirebaseAuth.instance;
     final user = auth.currentUser;
-
     // Check if user is logged in
     if (user != null) {
       // Navigate to PostScreen after 1 second

@@ -139,7 +139,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                     phoneNumber: phonenumberController.text,
                     verificationCompleted: (_) {},
                     verificationFailed: (e) {
-                      Utlis().toastMessage(e.toString());
+                      Utils.showSnackbar(context,e.toString());
                     },
                     codeSent: ((verificationId, forceResendingToken) {
                       Navigator.push(
@@ -155,7 +155,7 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
                       });
                     }),
                     codeAutoRetrievalTimeout: (e) {
-                      Utlis().toastMessage(e.toString());
+                      Utils.showSnackbar(context, e.toString());
                     });
               }),
         ],

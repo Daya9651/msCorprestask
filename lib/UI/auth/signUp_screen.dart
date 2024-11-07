@@ -39,7 +39,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       });
 
     }).onError((error, stackTrace){
-      Utlis().toastMessage(error.toString());
+      Utils.showSnackbar(context, error.toString());
       setState(() {
         loading = false ;
       });

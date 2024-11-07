@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
     _auth.signInWithEmailAndPassword(
         email: emailController.text.toString(),
         password: passController.text.toString()).then((value){
-          Utlis().toastMessage(value.user!.email.toString());
+          Utils.showSnackbar(context, value.user!.email.toString());
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
           PostScreen()));
           setState(() {
@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     }).onError((error, stackTrace){
       debugPrint(error.toString());
-      Utlis().toastMessage(error.toString());
+      Utils.showSnackbar(context, error.toString());
       setState(() {
         loading = false;
       });
