@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "121247277459",
-    "project_id": "fir-demo-b93ff",
-    "storage_bucket": "fir-demo-b93ff.appspot.com"
+    "project_number": "91066857729",
+    "project_id": "taskassign-56e21",
+    "storage_bucket": "taskassign-56e21.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:121247277459:android:a37f7cdaeafec92ab14866",
+        "mobilesdk_app_id": "1:91066857729:android:33bc53d6f721a221a44300",
         "android_client_info": {
-          "package_name": "com.dayagrps.app"
+          "package_name": "com.daya.mscorprestask"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC9M5A6Vx-z3ZZMj6JO2LgwapXSn-IX7Ms"
+          "current_key": "AIzaSyCJGJOGC6jzFQyvQKqE8vVDrfqFhpAtBdA"
         }
       ],
       "services": {

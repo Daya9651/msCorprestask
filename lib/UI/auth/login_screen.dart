@@ -1,16 +1,12 @@
-import 'package:demo_firebase/UI/auth/login_with_phoneNumber.dart';
 import 'package:demo_firebase/UI/auth/signUp_screen.dart';
-import 'package:demo_firebase/UI/posts/post_screen.dart';
+import 'package:demo_firebase/UI/upload_image.dart';
 import 'package:demo_firebase/utlis/utils.dart';
 import 'package:demo_firebase/widgets/round_button.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
 class LoginScreen extends StatefulWidget {
-
   const LoginScreen({super.key});
-
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -37,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
         password: passController.text.toString()).then((value){
           Utils.showSnackbar(context, value.user!.email.toString());
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
-          PostScreen()));
+          UploadImageScreen()));
           setState(() {
             loading = false;
           });
@@ -76,8 +72,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                         ),
                           hintText: 'Enter Your Email',
-                          // helperText: 'email e.g daya@gmail.com',
-                        // prefix: Icon(Icons.person_2_outlined)
                       ),
                       validator: (value){
                         if(value!.isEmpty){
@@ -95,8 +89,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)
                           ),
-
-                          // helperText: 'email e.g daya@gmail.'
                       ),
                       validator: (value){
                         if(value!.isEmpty){
@@ -127,26 +119,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 40,),
-
-            InkWell(
-              onTap: (){
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context)=>PhoneVerificationScreen()) );
-              },
-              child: Container(
-                height: 45,
-                decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.black)
-                ),
-                child: Center(
-                  child: Text("Login with Phone", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
-                ),
-              ),
-            )
-
           ],
         ),
       ),

@@ -25,7 +25,6 @@ class _PostScreenState extends State<PostScreen> {
   final remarkController = TextEditingController();
 
 
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -129,7 +128,7 @@ class _PostScreenState extends State<PostScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(10.0),
+                                padding: const EdgeInsets.all(3.0),
                                 child: Wrap(
                                   spacing: 30,
                                   children: [
@@ -278,7 +277,7 @@ class _PostScreenState extends State<PostScreen> {
           title: const Center(child: Text('Update')),
           content: SizedBox(
             width: 300, // Set the desired width here
-            height: 249, // Set the desired height here
+            height: 270, // Set the desired height here
             child: Column(
               // mainAxisSize: MainAxisSize.,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -304,6 +303,7 @@ class _PostScreenState extends State<PostScreen> {
                 const SizedBox(height: 7),
                 const Text("Remark", style: TextStyle(fontSize: 19),),
                 TextField(
+                  // maxLines: 2,
                   controller: remarkController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),

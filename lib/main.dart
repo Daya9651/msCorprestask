@@ -2,8 +2,6 @@ import 'package:demo_firebase/UI/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'image/base64image_picker_example.dart';
-
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -23,7 +21,6 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.purple
       ),
       home: SplashScreen()
-      // home: Base64ImagePickerExample()
     );
   }
 }
